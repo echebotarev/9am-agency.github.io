@@ -1,0 +1,284 @@
+{
+  "images": [
+    {
+      "path": "/images/clients/Component-7.png"
+    },
+    {
+      "path": "/images/clients/Component-10.png"
+    },
+    {
+      "path": "/images/clients/Component-12.png"
+    },
+    {
+      "path": "/images/clients/Component-11.png"
+    },
+    {
+      "path": "/images/clients/Component-14.png"
+    },
+    {
+      "path": "/images/clients/Component-15.png"
+    },
+    {
+      "path": "/images/clients/Component-16.png"
+    },
+    {
+      "path": "/images/clients/Component-18.png"
+    },
+    {
+      "path": "/images/clients/Component-20.png"
+    },
+    {
+      "path": "/images/clients/Component-21.png"
+    },
+    {
+      "path": "/images/clients/Component-6.png"
+    },
+    {
+      "path": "/images/clients/Component-17.png"
+    },
+    {
+      "path": "/images/clients/Component-19.png"
+    },
+    {
+      "path": "/images/clients/Component-8.png"
+    },
+    {
+      "path": "/images/clients/Component-9.png"
+    },
+    {
+      "path": "/images/clients/Component-38.png"
+    },
+    {
+      "path": "/images/clients/Component-33.png"
+    },
+    {
+      "path": "/images/clients/Component-24.png"
+    },
+    {
+      "path": "/images/clients/Component-35.png"
+    },
+    {
+      "path": "/images/clients/Component-23.png"
+    },
+    {
+      "path": "/images/clients/Component-34.png"
+    },
+    {
+      "path": "/images/clients/Component-36.png"
+    },
+    {
+      "path": "/images/clients/Component-28.png"
+    },
+    {
+      "path": "/images/clients/Component-29.png"
+    },
+    {
+      "path": "/images/clients/Component-31.png"
+    },
+    {
+      "path": "/images/clients/Component-39.png"
+    },
+    {
+      "path": "/images/clients/Component-41.png"
+    },
+    {
+      "path": "/images/clients/Component-26.png"
+    },
+    {
+      "path": "/images/clients/Component-43.png"
+    },
+    {
+      "path": "/images/clients/Component-27.png"
+    },
+    {
+      "path": "/images/clients/Component-42.png"
+    },
+    {
+      "path": "/images/clients/Component-40.png"
+    },
+    {
+      "path": "/images/clients/Component-37.png"
+    },
+    {
+      "path": "/images/clients/Component-23.png"
+    },
+    {
+      "path": "/images/clients/Component-30.png"
+    },
+    {
+      "path": "/images/clients/Component-22.png"
+    },
+    {
+      "path": "/images/clients/Component-32.png"
+    },
+    {
+      "path": "/images/clients/Component-25.png"
+    },
+    {
+      "path": "/images/clients/Component-13.png"
+    },
+    {
+      "path": "/images/clients/Component-22.png"
+    },
+    {
+      "path": "/images/clients/Component-44.png"
+    },
+    {
+      "path": "/images/clients/Component-45.png"
+    },
+    {
+      "path": "/images/clients/Component-46.png"
+    },
+    {
+      "path": "/images/clients/Component-57.png"
+    },
+    {
+      "path": "/images/clients/Component-47.png"
+    },
+    {
+      "path": "/images/clients/Component-55.png"
+    },
+    {
+      "path": "/images/clients/Component-51.png"
+    },
+    {
+      "path": "/images/clients/Component-56.png"
+    },
+    {
+      "path": "/images/clients/Component-48.png"
+    },
+    {
+      "path": "/images/clients/Component-49.png"
+    },
+    {
+      "path": "/images/clients/Component-50.png"
+    },
+    {
+      "path": "/images/clients/Component-52.png"
+    },
+    {
+      "path": "/images/clients/Component-53.png"
+    },
+    {
+      "path": "/images/clients/Component-54.png"
+    },
+    {
+      "path": "/images/clients/Component-58.png"
+    },
+    {
+      "path": "/images/clients/Component-59.png"
+    }
+  ],
+  "cases": [
+    {
+      "bgColor": "#F3FFEE",
+      "title": "Кейс для стоматологической клиники",
+      "description": "Для Natural Smile&Design мы создали рекламные кампании, привлекающие внимание к яркой улыбке. Мы разместили волшебные слова, такие как «индивидуальные решения», «скажи сыррр», и создали дизайн, отражающий страсть и профессионализм бренда.",
+      "logo": {
+        "path": "/images/cases/logo1.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon1-1.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-2.png",
+          "from": {
+            "x": "20%",
+            "y": 300
+          },
+          "to": {
+            "x": "20%",
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-3.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-4.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls1-1.svg"
+        },
+        {
+          "path": "/images/cases/balls1-2.svg"
+        },
+        {
+          "path": "/images/cases/balls1-3.svg"
+        },
+        {
+          "path": "/images/cases/balls1-4.svg"
+        },
+        {
+          "path": "/images/cases/balls1-5.svg"
+        }
+      ]
+    },
+    {
+      "bgColor": "#FEF1E5",
+      "title": "Кейс для торговой сети",
+      "description": "Сотрудничество с Fornetti было настоящим вызовом: мы изменили стиль, использовали новые шрифты и создали вдохновляющие слоганы.",
+      "logo": {
+        "path": "/images/cases/logo2.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon2-1.png"
+        },
+        {
+          "path": "/images/cases/icon2-2.png"
+        },
+        {
+          "path": "/images/cases/icon2-3.png"
+        },
+        {
+          "path": "/images/cases/icon2-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls2-1.svg"
+        },
+        {
+          "path": "/images/cases/balls2-2.svg"
+        },
+        {
+          "path": "/images/cases/balls2-3.svg"
+        },
+        {
+          "path": "/images/cases/balls2-4.svg"
+        },
+        {
+          "path": "/images/cases/balls2-5.svg"
+        }
+      ]
+    }
+  ]
+}

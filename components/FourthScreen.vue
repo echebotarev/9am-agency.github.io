@@ -92,7 +92,7 @@ const animation = ({
                 start: "top 85%",
                 end: "top 60%",
                 immediateRender: false,
-                markers: true,
+                // markers: true,
               },
             }
           : { duration }),

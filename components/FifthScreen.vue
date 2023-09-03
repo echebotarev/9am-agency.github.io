@@ -105,7 +105,9 @@ onMounted(() => {
       alt=""
       class="absolute ball"
     />
-    <Button class="mb-[80px]">Заказать услугу</Button>
+    <nuxt-link :to="{ path: '/', hash: '#contacts' }">
+      <Button class="mb-[80px]"> Заказать услугу </Button>
+    </nuxt-link>
 
     <h1
       id="video-production"
@@ -157,7 +159,9 @@ onMounted(() => {
         class="mx-auto"
       />
 
-      <Button class="mt-[80px] mb-[50px]">Заказать услугу</Button>
+      <nuxt-link :to="{ path: '/', hash: '#contacts' }">
+        <Button class="mb-[80px] mt-[50px]"> Заказать услугу </Button>
+      </nuxt-link>
     </div>
   </div>
 </template>

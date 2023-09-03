@@ -11,7 +11,7 @@ import Button from "~/components/common/Button.vue";
     </div>
 
     <div class="w-full bg-[#F9F9F9] py-[44px]">
-      <form class="form flex flex-col w-[50%] mx-auto">
+      <form id="form" class="form flex flex-col w-[50%] mx-auto">
         <span class="text-center font-semibold mb-3">
           Оставьте заявку и менеджер свяжется с вами
         </span>

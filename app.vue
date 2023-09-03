@@ -5,6 +5,7 @@ import SecondScreen from "~/components/SecondScreen.vue";
 import ThirdScreen from "~/components/ThirdScreen.vue";
 import FourthScreen from "~/components/FourthScreen.vue";
 import FifthScreen from "~/components/FifthScreen.vue";
+import SixthScreen from "~/components/SixthScreen.vue";
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import FifthScreen from "~/components/FifthScreen.vue";
     <ThirdScreen />
     <FourthScreen />
     <FifthScreen />
+    <SixthScreen />
   </div>
 </template>

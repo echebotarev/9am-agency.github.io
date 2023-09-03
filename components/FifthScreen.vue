@@ -82,7 +82,7 @@ onMounted(() => {
   const containerBalls = document.querySelector(".container-five");
   const tl = gsap.timeline().to(".container-five .ball", {
     x: `random(0, ${containerBalls?.clientWidth}, 5)`,
-    y: `random(0, ${containerBalls?.clientHeight}, 3)`,
+    y: `random(0, ${containerBalls?.clientHeight - 100}, 3)`,
     duration: 10,
     ease: "none",
     repeat: -1,
@@ -92,14 +92,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container-five pt-[100px] pb-[80px]">
+  <div class="container-five relative pt-[100px]">
     <img
       v-for="b in content.cases[3]?.balls"
       :src="b.path"
       alt=""
-      class="ball"
+      class="absolute ball"
     />
-    <Button />
+    <img
+      v-for="b in content.cases[3]?.balls"
+      :src="b.path"
+      alt=""
+      class="absolute ball"
+    />
+    <Button class="mb-[80px]">Заказать услугу</Button>
 
     <h1 class="text-[64px] font-bold text-center mb-[30px]">
       Video Production
@@ -148,15 +154,8 @@ onMounted(() => {
         class="mx-auto"
       />
 
-      <Button class="mt-[80px]" />
+      <Button class="mt-[80px] mb-[50px]">Заказать услугу</Button>
     </div>
-
-    <img
-      v-for="b in content.cases[3]?.balls"
-      :src="b.path"
-      alt=""
-      class="ball"
-    />
   </div>
 </template>
 

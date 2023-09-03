@@ -23,7 +23,7 @@ onMounted(() => {
 
 <template>
   <div class="screen pt-[71px]">
-    <h1 class="text-[64px] font-bold text-center mb-5">О нас</h1>
+    <h1 id="us" class="text-[64px] font-bold text-center mb-5">О нас</h1>
     <p class="text-xl mb-7 px-[120px]">
       За последние 7 лет мы подружились со многими брендами и прожили настоящую
       историю. Мы вместе смеялись, учились и росли, превращая каждое

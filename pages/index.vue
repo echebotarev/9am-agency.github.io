@@ -12,7 +12,7 @@ import Footer from "~/components/Footer.vue";
 
 <template>
   <Header />
-  <div class="relative top-[-70px]">
+  <div class="relative">
     <MainScreen />
     <SecondScreen />
     <ThirdScreen />

@@ -107,7 +107,10 @@ onMounted(() => {
     />
     <Button class="mb-[80px]">Заказать услугу</Button>
 
-    <h1 class="text-[64px] font-bold text-center mb-[30px]">
+    <h1
+      id="video-production"
+      class="text-[64px] font-bold text-center mb-[30px]"
+    >
       Video Production
     </h1>
     <p class="text-xl px-[120px] mb-[70px] text-center">

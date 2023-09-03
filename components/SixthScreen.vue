@@ -5,7 +5,9 @@ import Button from "~/components/common/Button.vue";
 <template>
   <div>
     <div class="image pt-[30px] pb-[44px]">
-      <h1 class="text-[64px] font-bold text-center mb-[30px]">Контакты</h1>
+      <h1 id="contacts" class="text-[64px] font-bold text-center mb-[30px]">
+        Контакты
+      </h1>
     </div>
 
     <div class="w-full bg-[#F9F9F9] py-[44px]">

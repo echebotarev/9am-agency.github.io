@@ -279,6 +279,82 @@
           "path": "/images/cases/balls2-5.svg"
         }
       ]
+    },
+    {
+      "bgColor": "#E5F1FE",
+      "title": "Кейс для компании охраны и видеонаблюдения",
+      "description": "Oraşul meu Protejat запоминается дизайном, на котором мы разместили сильные сообщения, такие как «оставайтесь в безопасности» и «безопасность подъезда». Благодаря сочетанию дизайна и посыла, нам удалось вдохновить людей обратить больше внимания на эту компанию.",
+      "logo": {
+        "path": "/images/cases/logo3.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon3-1.png"
+        }, {
+          "path": "/images/cases/icon3-2.png"
+        },
+        {
+          "path": "/images/cases/icon3-3.png"
+        },
+        {
+          "path": "/images/cases/icon3-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls3-1.svg"
+        },
+        {
+          "path": "/images/cases/balls3-2.svg"
+        },
+        {
+          "path": "/images/cases/balls3-3.svg"
+        },
+        {
+          "path": "/images/cases/balls3-4.svg"
+        },
+        {
+          "path": "/images/cases/balls3-5.svg"
+        }
+      ]
+    },
+    {
+      "bgColor": "#FEE5E5",
+      "title": "Кейс для мебельной компании",
+      "description": "Мы создали незабываемые рекламные кампании для Ambianța. Мы усилили их послание и выдвинули на первый план их ценности: творчество, инновации и вдохновение. Мы разместили ключевые слова в уникальном и ярком дизайне, превратив их в мощный посыл.",
+      "logo": {
+        "path": "/images/cases/logo4.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon4-1.png"
+        }, {
+          "path": "/images/cases/icon4-2.png"
+        },
+        {
+          "path": "/images/cases/icon4-3.png"
+        },
+        {
+          "path": "/images/cases/icon4-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls4-1.svg"
+        },
+        {
+          "path": "/images/cases/balls4-2.svg"
+        },
+        {
+          "path": "/images/cases/balls4-3.svg"
+        },
+        {
+          "path": "/images/cases/balls4-4.svg"
+        },
+        {
+          "path": "/images/cases/balls4-5.svg"
+        }
+      ]
     }
   ]
 }

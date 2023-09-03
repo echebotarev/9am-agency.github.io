@@ -22,8 +22,6 @@ let iconsArray = null;
 
 watch(shadowSlideIndex, (nextIndex, prevIndex) => {
   processing = true;
-  console.log("prevIndex", prevIndex);
-  console.log("nextIndex", nextIndex);
   const prevData = content.cases[prevIndex];
   const nextData = content.cases[nextIndex];
 

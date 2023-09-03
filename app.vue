@@ -4,6 +4,7 @@ import MainScreen from "~/components/MainScreen.vue";
 import SecondScreen from "~/components/SecondScreen.vue";
 import ThirdScreen from "~/components/ThirdScreen.vue";
 import FourthScreen from "~/components/FourthScreen.vue";
+import FifthScreen from "~/components/FifthScreen.vue";
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import FourthScreen from "~/components/FourthScreen.vue";
     <SecondScreen />
     <ThirdScreen />
     <FourthScreen />
+    <FifthScreen />
   </div>
 </template>

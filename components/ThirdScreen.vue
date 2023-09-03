@@ -17,7 +17,7 @@ const content = await queryContent("/content").findOne();
     </div>
 
     <h1 class="text-[64px] font-bold text-center my-[30px]">SMM</h1>
-    <p class="text-xl px-[120px] mb-[70px]">
+    <p class="text-xl px-[120px] mb-[70px] text-center">
       Взлетайте выше с нами! Раскрывайте свой бренд и захватывайте сердца вашей
       аудитории. Вместе, мы создадим потрясающие истории, которые никогда не
       будут забыты. Подарите своей компании заботу и вдохновение!

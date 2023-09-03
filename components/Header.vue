@@ -8,10 +8,18 @@
 
     <div class="flex h-[70px] justify-end">
       <div class="links my-auto font-semibold">
-        <nuxt-link class="mr-10">SMM</nuxt-link>
-        <nuxt-link class="mr-10">Видеопродакшен</nuxt-link>
-        <nuxt-link class="mr-10">О нас</nuxt-link>
-        <nuxt-link class="mr-10">Контакты</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#smm' }" class="mr-10"
+          >SMM</nuxt-link
+        >
+        <nuxt-link :to="{ path: '/', hash: '#video-production' }" class="mr-10"
+          >Видеопродакшен</nuxt-link
+        >
+        <nuxt-link :to="{ path: '/', hash: '#us' }" class="mr-10"
+          >О нас</nuxt-link
+        >
+        <nuxt-link :to="{ path: '/', hash: '#contacts' }" class="mr-10"
+          >Контакты</nuxt-link
+        >
       </div>
 
       <a

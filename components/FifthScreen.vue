@@ -4,6 +4,7 @@ import Button from "~/components/common/Button.vue";
 import VideoContainer from "~/components/common/VideoContainer.vue";
 
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const content = await queryContent("/content").findOne();
 
@@ -12,6 +13,22 @@ const getTanDeg = (deg: number) => {
   const rad = getRadian(deg);
   return Math.tan(rad);
 };
+
+let count = 0;
+const refresh = () => {
+  ScrollTrigger.refresh();
+};
+const runRefresh = () => {
+  count += 1;
+  if (count < 20) {
+    setTimeout(() => {
+      refresh();
+      runRefresh();
+    }, 1000);
+  }
+};
+
+runRefresh();
 
 const cornerDeg = 3;
 
@@ -99,12 +116,6 @@ onMounted(() => {
       alt=""
       class="absolute ball"
     />
-    <img
-      v-for="b in content.cases[3]?.balls"
-      :src="b.path"
-      alt=""
-      class="absolute ball"
-    />
     <nuxt-link :to="{ path: '/', hash: '#contacts' }">
       <Button class="mb-[80px]"> Заказать услугу </Button>
     </nuxt-link>
@@ -133,7 +144,7 @@ onMounted(() => {
           :key="index"
           class="video aspect-video"
         >
-          <VideoContainer :src="v.url" />
+          <VideoContainer :src="v.url" :poster="v.poster" />
         </div>
       </div>
 
@@ -145,10 +156,10 @@ onMounted(() => {
           :key="index"
           class="video aspect-video"
         >
-          <VideoContainer :src="v.url" />
+          <VideoContainer :src="v.url" :poster="v.poster" />
         </div>
       </div>
-    </div>-->
+    </div>
 
     <div class="main-video mt-[100px]">
       <VideoContainer
@@ -156,7 +167,7 @@ onMounted(() => {
         :controls="content.videos.main.controls"
         width="560"
         height="315"
-        class="mx-auto"
+        class="w-fit h-fit mx-auto"
       />
 
       <nuxt-link :to="{ path: '/', hash: '#contacts' }">

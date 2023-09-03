@@ -290,7 +290,8 @@
       "icons": [
         {
           "path": "/images/cases/icon3-1.png"
-        }, {
+        },
+        {
           "path": "/images/cases/icon3-2.png"
         },
         {
@@ -328,7 +329,8 @@
       "icons": [
         {
           "path": "/images/cases/icon4-1.png"
-        }, {
+        },
+        {
           "path": "/images/cases/icon4-2.png"
         },
         {
@@ -356,5 +358,86 @@
         }
       ]
     }
-  ]
+  ],
+  "videos": {
+    "main": {
+      "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+      "controls": true,
+      "poster": ""
+    },
+    "items": [
+      {
+        "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/FQ51wGkSS1U?si=zkq-JXLDJDShBGHx",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/fLBbIYHmvZ0?si=2dcKmDA_4vTa7FPX",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/_TU6bTTRIvY?si=rdvA3l9tqK-3098A",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/2cOQGqdx2gI?si=uviIXvIOOrS38vbB",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/O2-ZHshn2tc?si=tkBgSED5cfcJKn5T",
+        "controls": false,
+        "poster": "",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/gNQgrGnwiWA?si=qDf-1leCnoYOBj_X",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/CeoBeUIt0O4?si=MQ6DCPEdjcZ1Jsmy",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/3Wci_5N7q3U?si=tJuJeFWxB44OvEXQ",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/TrIdtOkIfjM?si=F-g2eKaqhdn-bf6V",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/OYX9zN5BVso?si=bKVhB_zzBLPWNuN4",
+        "controls": false,
+        "poster": "",
+        "position": 1
+      }
+    ]
+  }
 }

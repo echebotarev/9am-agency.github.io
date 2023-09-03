@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import Button from "~/components/common/Button.vue";
+import VideoContainer from "~/components/common/VideoContainer.vue";
 
 import gsap from "gsap";
+
+const content = await queryContent("/content").findOne();
 
 const getRadian = (deg: number) => (deg * Math.PI) / 180;
 const getTanDeg = (deg: number) => {
@@ -75,11 +78,27 @@ onMounted(() => {
       },
     );
   });
+
+  const containerBalls = document.querySelector(".container-five");
+  const tl = gsap.timeline().to(".container-five .ball", {
+    x: `random(0, ${containerBalls?.clientWidth}, 5)`,
+    y: `random(0, ${containerBalls?.clientHeight}, 3)`,
+    duration: 10,
+    ease: "none",
+    repeat: -1,
+    repeatRefresh: true,
+  });
 });
 </script>
 
 <template>
-  <div class="pt-[100px]">
+  <div class="container-five pt-[100px] pb-[80px]">
+    <img
+      v-for="b in content.cases[3]?.balls"
+      :src="b.path"
+      alt=""
+      class="ball"
+    />
     <Button />
 
     <h1 class="text-[64px] font-bold text-center mb-[30px]">
@@ -94,41 +113,56 @@ onMounted(() => {
 
     <h1 class="text-[64px] font-bold text-center mb-[30px]">Наши работы</h1>
 
-    <div class="videos relative px-3 w-[1000px]">
+    <div class="videos relative px-3">
       <div class="grid grid-cols-6 gap-1 first mb-2">
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
+        <div
+          v-for="(v, index) in content.videos.items.filter(
+            (v: any) => v.position === 0,
+          )"
+          :key="index"
+          class="video aspect-video"
+        >
+          <VideoContainer :src="v.url" />
+        </div>
       </div>
 
       <div class="grid grid-cols-6 gap-1 second">
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
-        <div class="video aspect-video bg-[purple]"></div>
+        <div
+          v-for="(v, index) in content.videos.items.filter(
+            (v: any) => v.position === 1,
+          )"
+          :key="index"
+          class="video aspect-video"
+        >
+          <VideoContainer :src="v.url" />
+        </div>
       </div>
     </div>
 
     <div class="main-video mt-[100px]">
-      <iframe
+      <VideoContainer
+        :src="content.videos.main.url"
+        :controls="content.videos.main.controls"
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
         class="mx-auto"
-      ></iframe>
+      />
 
       <Button class="mt-[80px]" />
     </div>
+
+    <img
+      v-for="b in content.cases[3]?.balls"
+      :src="b.path"
+      alt=""
+      class="ball"
+    />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.video {
+  border-radius: 4px;
+  overflow: hidden;
+}
+</style>

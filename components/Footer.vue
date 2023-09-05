@@ -2,7 +2,7 @@
 
 <template>
   <footer class="text-white">
-    <div class="grid grid-cols-4 gap-10 pt-[60px] px-[60px]">
+    <div class="grid grid-cols-4 gap-10 py-[60px] px-[60px]">
       <div>
         <img src="/images/logo-white.png" alt="" />
       </div>
@@ -53,14 +53,14 @@
         </div>
         <div class="mb-4">
           <a
-            href="www.instagram.com/9am_agency?igshid=MzRlODBiNWFlZA=="
+            href="https://www.instagram.com/9am_agency?igshid=MzRlODBiNWFlZA=="
             target="_blank"
             class="inline-block mr-2"
           >
             <img src="/images/inst.svg" alt="" class="w-[40px]" />
           </a>
           <a
-            href="www.facebook.com/9am.agency?mibextid=ZbWKwL"
+            href="https://www.facebook.com/9am.agency?mibextid=ZbWKwL"
             target="_blank"
             class="inline-block mr-2"
           >
@@ -74,7 +74,7 @@
             <img src="/images/tiktok.svg" alt="" class="w-[40px]" />
           </a>
           <a
-            href="www.youtube.com/@9amagency296"
+            href="https://www.youtube.com/@9amagency296"
             target="_blank"
             class="inline-block mr-2"
           >

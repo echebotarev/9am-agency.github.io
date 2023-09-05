@@ -15,7 +15,9 @@
     </div>
     <div class="info flex bg-[#FFDDDF] font-semibold rounded-l-lg pl-4">
       <div class="my-auto">
-        <p class="mb-4">Свяжитесь с нами по телефону или с помощью менеджера</p>
+        <p class="mb-4">
+          Свяжитесь с нами по телефону или с помощью менеджеров
+        </p>
         <a href="tel:+373060320713" target="_blank" class="mr-6">
           <img
             src="/images/call.svg"

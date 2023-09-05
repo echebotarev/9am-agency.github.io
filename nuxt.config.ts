@@ -4,6 +4,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+  app: {
+    head: {
+      titleTemplate: "%s",
+      title: "9am agency",
+      meta: [
+        { charset: "utf-8" },
+        {
+          name: "viewport",
+          content:
+            "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover",
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "9am agency. Video Production.",
+        },
+      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css", "vuetify/lib/styles/main.sass"],
   // build: {

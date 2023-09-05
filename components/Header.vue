@@ -16,7 +16,7 @@ onMounted(() => {
       start: "top 50%",
       end: "top 55%",
       immediateRender: false,
-      markers: true,
+      // markers: true,
     },
   });
 

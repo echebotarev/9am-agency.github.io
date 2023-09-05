@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="screen pt-[71px]">
+  <div class="second-screen pt-[71px]">
     <h1 id="us" class="text-[64px] font-bold text-center mb-5">О нас</h1>
     <p class="text-xl mb-7 px-[120px]">
       За последние 7 лет мы подружились со многими брендами и прожили настоящую
@@ -226,7 +226,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.screen {
+.second-screen {
   background: url("/images/fon.png") repeat;
 }
 .item {

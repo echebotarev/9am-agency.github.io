@@ -49,7 +49,7 @@ const onMouseMove = (e: MouseEvent) => {
 </script>
 
 <template>
-  <div class="comparisonSection w-full" @mousemove="onMouseMove">
+  <div class="main-screen comparisonSection w-full" @mousemove="onMouseMove">
     <div class="comparisonImage absolute before">
       <img src="/images/desktop-image-before.png" alt="" />
     </div>

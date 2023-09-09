@@ -91,6 +91,12 @@ const onTouchMove = (e: TouchEvent) => {
     @mousemove="onMouseMove"
     @touchmove="onTouchMove"
   >
+    <img
+      v-if="isMobile"
+      src="/images/logo.svg"
+      alt="9am agency"
+      class="absolute z-10 top-4 left-2.5"
+    />
     <div class="comparisonImage absolute before">
       <img
         :src="

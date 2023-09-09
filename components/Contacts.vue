@@ -54,7 +54,7 @@ const { isMobile } = useDevice();
           </a>
         </div>
 
-        <div class="mb-4">
+        <!--        <div class="mb-4">
           <p class="mb-2">Следите за нами в соцсетях</p>
           <a
             href="www.instagram.com/9am_agency?igshid=MzRlODBiNWFlZA=="
@@ -84,7 +84,7 @@ const { isMobile } = useDevice();
           >
             <img src="/images/youtube.svg" alt="" class="w-[40px]" />
           </a>
-        </div>
+        </div>-->
 
         <div>
           <img src="/images/location.svg" alt="" class="inline-block mr-2" />

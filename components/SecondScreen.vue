@@ -29,7 +29,14 @@ onMounted(() => {
 
 <template>
   <div :class="`second-screen ${isMobile ? 'pt-[31px]' : 'pt-[71px]'}`">
-    <h1 id="us" class="text-[64px] font-bold text-center mb-5">О нас</h1>
+    <h1
+      id="us"
+      :class="`font-bold text-center mb-5 ${
+        isMobile ? 'text-[40px]' : 'text-[64px]'
+      }`"
+    >
+      О нас
+    </h1>
     <p :class="`text-xl mb-7 ${isMobile ? 'px-[10px]' : 'px-[120px]'}`">
       За последние 7 лет мы подружились со многими брендами и прожили настоящую
       историю. Мы вместе смеялись, учились и росли, превращая каждое
@@ -49,8 +56,8 @@ onMounted(() => {
     </p>
 
     <h1
-      :class="`text-[64px] font-bold text-center mb-5 ${
-        isMobile ? 'leading-[60px]' : ''
+      :class="`font-bold text-center mb-5 ${
+        isMobile ? 'leading-[60px] text-[40px]' : 'text-[64px]'
       }`"
     >
       Что нас отличает

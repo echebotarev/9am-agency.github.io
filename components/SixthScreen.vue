@@ -5,7 +5,12 @@ import Button from "~/components/common/Button.vue";
 <template>
   <div>
     <div class="image pt-[30px] pb-[44px]">
-      <h1 id="contacts" class="text-[64px] font-bold text-center mb-[30px]">
+      <h1
+        id="contacts"
+        :class="`font-bold text-center mb-[30px] ${
+          isMobile ? 'text-[40px]' : 'text-[64px]'
+        }`"
+      >
         Контакты
       </h1>
     </div>

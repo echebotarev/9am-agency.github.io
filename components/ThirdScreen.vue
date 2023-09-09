@@ -25,8 +25,8 @@ const next = () => {
 <template>
   <div class="relative top-[70px] pb-[50px]">
     <h1
-      :class="`text-[64px] font-bold text-center mb-[30px] ${
-        isMobile ? 'leading-[60px]' : ''
+      :class="`font-bold text-center mb-[30px] ${
+        isMobile ? 'leading-[60px] text-[40px]' : 'text-[64px]'
       }`"
     >
       Наши клиенты
@@ -61,7 +61,14 @@ const next = () => {
       />
     </div>
 
-    <h1 id="smm" class="text-[64px] font-bold text-center my-[30px]">SMM</h1>
+    <h1
+      id="smm"
+      :class="`font-bold text-center mb-[30px] ${
+        isMobile ? 'text-[40px]  mt-10' : 'text-[64px]'
+      }`"
+    >
+      SMM
+    </h1>
     <p
       :class="`text-xl mb-[70px] text-center ${
         isMobile ? 'px-2.5' : 'px-[120px]'

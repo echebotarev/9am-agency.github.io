@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const content = await queryContent("/content").findOne();
+const { isMobile } = useDevice();
 
 const getRadian = (deg: number) => (deg * Math.PI) / 180;
 const getTanDeg = (deg: number) => {
@@ -33,6 +34,9 @@ runRefresh();
 const cornerDeg = 3;
 
 onMounted(() => {
+  if (isMobile) {
+    return false;
+  }
   const container = document.querySelector(".videos");
   const topVideos = gsap.utils.toArray(
     document.querySelectorAll(".first .video"),
@@ -95,7 +99,8 @@ onMounted(() => {
       },
     );
   });
-
+});
+onMounted(() => {
   const containerBalls = document.querySelector(".container-five");
   const tl = gsap.timeline().to(".container-five .ball", {
     x: `random(0, ${containerBalls?.clientWidth}, 5)`,
@@ -109,7 +114,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container-five relative pt-[100px]">
+  <div :class="`container-five relative ${isMobile ? 'pt-10' : 'pt-[100px]'}`">
     <img
       v-for="b in content.cases[3]?.balls"
       :src="b.path"
@@ -122,20 +127,43 @@ onMounted(() => {
 
     <h1
       id="video-production"
-      class="text-[64px] font-bold text-center mb-[30px]"
+      :class="`font-bold text-center mb-[30px] ${
+        isMobile ? 'text-[40px]' : 'text-[64px]'
+      }`"
     >
       Video Production
     </h1>
-    <p class="text-xl px-[120px] mb-[70px] text-center">
+    <p
+      :class="`text-xl mb-[70px] text-center ${
+        isMobile ? 'px-3' : 'px-[120px]'
+      }`"
+    >
       Мы - ваш надежный партнер в создании видео контента, который искренне
       трогает сердца аудитории. Объединяем профессионализм и страсть к
       искусству, чтобы каждый проект стал уникальным. Ваше видео будет не просто
       материалом, а живой историей и настоящим путешествием вашего бренда.
     </p>
 
-    <h1 class="text-[64px] font-bold text-center mb-[30px]">Наши работы</h1>
+    <h1
+      :class="`font-bold text-center mb-[30px] ${
+        isMobile ? 'text-[40px]' : 'text-[64px]'
+      }`"
+    >
+      Наши работы
+    </h1>
 
-    <div class="videos relative px-3">
+    <div v-if="isMobile" class="overflow-x-scroll">
+      <div class="flex flex-nowrap gap-3 w-[3350px] px-2">
+        <div v-for="(v, index) in content.videos.items" :key="index">
+          <VideoContainer
+            :src="v.url"
+            :poster="v.poster"
+            class="video relative h-[150px] aspect-video"
+          />
+        </div>
+      </div>
+    </div>
+    <div v-else class="videos relative px-3">
       <div class="grid grid-cols-6 gap-1 first mb-2">
         <div
           v-for="(v, index) in content.videos.items.filter(
@@ -161,13 +189,13 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="main-video mt-[100px]">
+    <div :class="`main-video ${isMobile ? 'mt-[30px]' : 'mt-[100px]'}`">
       <VideoContainer
         :src="content.videos.main.url"
         :controls="content.videos.main.controls"
-        width="560"
-        height="315"
-        class="w-fit h-fit mx-auto"
+        :width="isMobile ? '100%' : 560"
+        :height="isMobile ? '100%' : 315"
+        :class="`${isMobile ? 'w-[90%] aspect-video' : 'w-fit h-fit'} mx-auto`"
       />
 
       <nuxt-link :to="{ path: '/', hash: '#contacts' }">

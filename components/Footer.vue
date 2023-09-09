@@ -1,10 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { isMobile } = useDevice();
+</script>
 
 <template>
   <footer class="text-white">
-    <div class="grid grid-cols-4 gap-10 py-[60px] px-[60px]">
-      <div>
-        <img src="/images/logo-white.png" alt="" />
+    <div
+      :class="
+        isMobile
+          ? 'flex flex-col gap-10 pt-4 pb-7 text-xl text-center font-semibold'
+          : 'grid grid-cols-4 gap-10 py-[60px] px-[60px]'
+      "
+    >
+      <div class="flex">
+        <img src="/images/logo-white.png" alt="" class="mx-auto" />
       </div>
 
       <div>
@@ -46,11 +54,11 @@
       </div>
 
       <div>
-        <div class="mb-2">
+        <!--        <div class="mb-2">
           <a href="https://wa.me/373060320713" target="_blank">
             <img src="/images/whatsapp.svg" alt="" class="w-[40px]" />
           </a>
-        </div>
+        </div>-->
         <div class="mb-4">
           <a
             href="https://www.instagram.com/9am_agency?igshid=MzRlODBiNWFlZA=="

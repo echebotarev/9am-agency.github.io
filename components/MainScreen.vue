@@ -48,8 +48,15 @@ const onMouseStart = (e: MouseEvent) => {
   isMouseDown = true;
   width = document.body.getBoundingClientRect().width;
 };
+const onTouchStart = (e: TouchEvent) => {
+  isMouseDown = true;
+  height = mainScreen.value?.getBoundingClientRect().height || 0;
+};
 
 const onMouseEnd = (e: MouseEvent) => {
+  isMouseDown = false;
+};
+const onTouchEnd = (e: TouchEvent) => {
   isMouseDown = false;
 };
 
@@ -60,6 +67,21 @@ const onMouseMove = (e: MouseEvent) => {
   shift.value = (clientX / width) * 100;
   shiftX.value = clientX;
 };
+const onTouchMove = (e: TouchEvent) => {
+  if (!isMouseDown) return;
+  e.preventDefault();
+
+  const hRect = mainScreen.value?.getBoundingClientRect() || {};
+  const { clientY } = e.touches[0];
+
+  const y = clientY - hRect.top;
+  if (y >= hRect.height || y <= 0) {
+    return false;
+  }
+
+  shift.value = (y / height) * 100;
+  shiftY.value = y;
+};
 </script>
 
 <template>
@@ -67,6 +89,7 @@ const onMouseMove = (e: MouseEvent) => {
     ref="mainScreen"
     class="main-screen comparisonSection w-full"
     @mousemove="onMouseMove"
+    @touchmove="onTouchMove"
   >
     <div class="comparisonImage absolute before">
       <img
@@ -105,6 +128,8 @@ const onMouseMove = (e: MouseEvent) => {
       v-if="isMobile"
       class="divider absolute w-full h-1 left-0 bg-white"
       :style="`transform: translate(0px, ${shiftY}px);`"
+      @touchstart="onTouchStart"
+      @touchend="onTouchEnd"
     >
       <div
         class="ball flex justify-center flex-col relative w-[60px] h-[60px] rounded-full bg-white"

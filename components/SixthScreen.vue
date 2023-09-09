@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from "~/components/common/Button.vue";
+const { isMobile } = useDevice();
 </script>
 
 <template>
@@ -7,8 +8,8 @@ import Button from "~/components/common/Button.vue";
     <div class="image pt-[30px] pb-[44px]">
       <h1
         id="contacts"
-        :class="`font-bold text-center mb-[30px] ${
-          isMobile ? 'text-[40px]' : 'text-[64px]'
+        :class="`font-bold text-center ${
+          isMobile ? 'text-[40px] ' : 'text-[64px] mb-[30px]'
         }`"
       >
         Контакты
@@ -16,7 +17,12 @@ import Button from "~/components/common/Button.vue";
     </div>
 
     <div class="w-full bg-[#F9F9F9] py-[44px]">
-      <form id="form" class="form flex flex-col w-[50%] mx-auto">
+      <form
+        id="form"
+        :class="`form flex flex-col mx-auto ${
+          isMobile ? 'w-[95%]' : 'w-[50%]'
+        }`"
+      >
         <span class="text-center font-semibold mb-3">
           Оставьте заявку и менеджер свяжется с вами
         </span>

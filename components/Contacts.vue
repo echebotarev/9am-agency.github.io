@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { isMobile } = useDevice();
+</script>
 
 <template>
-  <div class="grid grid-cols-2 gap-4 pt-[64px] pb-[45px]">
+  <div
+    :class="
+      isMobile
+        ? 'flex flex-col-reverse'
+        : 'grid grid-cols-2 gap-4 pt-[64px] pb-[45px]'
+    "
+  >
     <div class="map overflow-hidden rounded-r-lg">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.034754523096!2d28.832708176736098!3d47.039548826962466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97db22f736a81%3A0x4a04cbef37087976!2zMSwgU3RyYWRhIEFsYmnFn29hcmEgNzgsIENoacWfaW7Eg3UsINCc0L7Qu9C00L7QstCw!5e0!3m2!1sru!2spt!4v1693751954328!5m2!1sru!2spt"
@@ -13,7 +21,11 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-    <div class="info flex bg-[#FFDDDF] font-semibold rounded-l-lg pl-4">
+    <div
+      :class="`info flex bg-[#FFDDDF] font-semibold pl-4 ${
+        isMobile ? 'rounded-t-2xl pt-7 pb-[50px] px-4' : 'rounded-l-lg'
+      }`"
+    >
       <div class="my-auto">
         <p class="mb-4">
           Свяжитесь с нами по телефону или с помощью менеджеров

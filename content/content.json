@@ -223,6 +223,20 @@
           }
         }
       ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile1-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-4.png"
+        }
+      ],
       "balls": [
         {
           "path": "/images/cases/balls1-1.svg"

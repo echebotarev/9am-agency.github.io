@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const content = await queryContent("/content").findOne();
+const { isMobile } = useDevice();
 
 const shadowSlideIndex = ref(0);
 const slideIndex = ref(-1);
@@ -23,6 +24,10 @@ let icons = null;
 let iconsArray = null;
 
 watch(shadowSlideIndex, (nextIndex, prevIndex) => {
+  if (isMobile) {
+    return (slideIndex.value = nextIndex);
+  }
+
   processing = true;
   const prevData = content.cases[prevIndex];
   const nextData = content.cases[nextIndex];
@@ -77,6 +82,10 @@ const animation = ({
   isIn = false,
   onComplete = () => {},
 }) => {
+  if (!arr?.length) {
+    return false;
+  }
+
   const shift = 20;
   arr.forEach((icon, index) => {
     gsap.fromTo(
@@ -146,13 +155,19 @@ onBeforeMount(() => {
 
 onMounted(() => {
   iconsContainer = document.querySelector(".icons-container");
+  if (!iconsContainer) {
+    return;
+  }
+
   icons = iconsContainer.querySelectorAll(".icon");
   iconsArray = Array.from(icons);
 
   quarter = iconsContainer?.clientWidth / 4;
 
   animation({ arr: iconsArray, isScrollTrigger: true, isIn: true });
+});
 
+onMounted(() => {
   const container = document.querySelector(".container-four");
   gsap.set(".container-four .ball", {
     x: `random(0, ${container?.clientWidth}, 5)`,
@@ -173,38 +188,66 @@ onMounted(() => {
   <div
     v-if="data"
     :style="`background-color: ${data.bgColor}`"
-    :class="`container-four relative overflow-hidden w-full h-[710px] py-[50px]`"
+    :class="`container-four relative overflow-hidden w-full ${
+      isMobile ? '' : 'h-[710px] py-[50px]'
+    }`"
   >
     <div v-for="(ball, i) in data.balls" :key="i" class="ball absolute">
       <img :src="ball.path" alt="" />
     </div>
-
-    <div
-      class="title text-[40px] font-bold text-center mb-[30px] text-[#505050]"
-    >
-      {{ data.title }}
-    </div>
-
-    <div
-      class="description w-[80%] bg-white py-[28px] px-[2%] mb-10 overflow-auto mx-auto flex"
-    >
-      <div class="logo w-[134px] mr-3">
-        <img :src="data.logo.path" alt="" />
+    <div v-if="isMobile">
+      <h3
+        class="text-[24px] font-bold text-center mb-[30px] text-[#505050] leading-[30px] mt-5 mx-10"
+      >
+        {{ data.title }}
+      </h3>
+      <img :src="data.logo.path" alt="" class="mt-5 mx-auto" />
+      <div class="mt-5 mx-10">{{ data.description }}</div>
+      <div
+        v-if="data.iconsMobile"
+        class="flex flex-nowrap overflow-x-scroll mt-2"
+      >
+        <img
+          v-for="(icon, i) in data.iconsMobile"
+          :key="i"
+          :src="icon.path"
+          alt=""
+          class="m-auto"
+        />
       </div>
-      <div class="text w-[80%] flex">
-        <p class="my-auto">{{ data.description }}</p>
-      </div>
     </div>
+    <div v-else>
+      <div
+        class="title text-[40px] font-bold text-center mb-[30px] text-[#505050]"
+      >
+        {{ data.title }}
+      </div>
 
-    <div class="icons-container relative w-[80%] h-[50%] mx-auto">
-      <div v-for="(icon, i) in data.icons" :key="i" class="icon absolute">
-        <img :src="icon.path" alt="" />
+      <div
+        class="description w-[80%] bg-white py-[28px] px-[2%] mb-10 overflow-auto mx-auto flex"
+      >
+        <div class="logo w-[134px] mr-3">
+          <img :src="data.logo.path" alt="" />
+        </div>
+        <div class="text w-[80%] flex">
+          <p class="my-auto">{{ data.description }}</p>
+        </div>
+      </div>
+
+      <div class="icons-container relative w-[80%] h-[50%] mx-auto">
+        <div v-for="(icon, i) in data.icons" :key="i" class="icon absolute">
+          <img :src="icon.path" alt="" />
+        </div>
       </div>
     </div>
 
     <ButtonsSlide
       v-if="content.cases.length > 1"
-      class="buttons absolute flex right-[40px] bottom-[20px]"
+      :class="
+        isMobile
+          ? 'relative flex justify-center mt-2 mb-5'
+          : 'buttons absolute flex right-[40px] bottom-[20px]'
+      "
       @prev="prevSlide"
       @next="nextSlide"
     />

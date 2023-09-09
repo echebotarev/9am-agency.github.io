@@ -21,7 +21,7 @@ export default defineNuxtConfig({
           content: "9am agency. Video Production.",
         },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
     },
   },
   devtools: { enabled: true },
@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     //     (config) => config?.plugins?.push(vuetify()) as HookResult,
     //   );
     // },
+    "@nuxtjs/device",
   ],
   postcss: {
     plugins: {

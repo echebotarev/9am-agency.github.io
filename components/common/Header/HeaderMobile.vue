@@ -50,7 +50,14 @@ const close = () => {
 </template>
 
 <style scoped>
+.container-menu {
+  pointer-events: none;
+}
+.btn-open {
+  pointer-events: all;
+}
 .menu {
   background: linear-gradient(90deg, #ece9e6 0%, #fff 100%);
+  pointer-events: all;
 }
 </style>

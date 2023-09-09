@@ -62,7 +62,11 @@ const next = () => {
     </div>
 
     <h1 id="smm" class="text-[64px] font-bold text-center my-[30px]">SMM</h1>
-    <p class="text-xl px-[120px] mb-[70px] text-center">
+    <p
+      :class="`text-xl mb-[70px] text-center ${
+        isMobile ? 'px-2.5' : 'px-[120px]'
+      }`"
+    >
       Взлетайте выше с нами! Раскрывайте свой бренд и захватывайте сердца вашей
       аудитории. Вместе, мы создадим потрясающие истории, которые никогда не
       будут забыты. Подарите своей компании заботу и вдохновение!

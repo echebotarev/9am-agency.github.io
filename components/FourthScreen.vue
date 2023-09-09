@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, onBeforeMount, onMounted, watch } from "vue";
+import ButtonsSlide from "~/components/common/ButtonsSlide.vue";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -200,24 +202,12 @@ onMounted(() => {
       </div>
     </div>
 
-    <div
+    <ButtonsSlide
       v-if="content.cases.length > 1"
       class="buttons absolute flex right-[40px] bottom-[20px]"
-    >
-      <div
-        class="btn flex w-[50px] h-[50px] cursor-pointer bg-[#ffd9dd] rounded-full mr-[30px]"
-        @click="prevSlide"
-      >
-        <img src="/images/chevron-left.svg" alt="" class="w-5 h-5 m-auto" />
-      </div>
-
-      <div
-        class="btn flex w-[50px] h-[50px] cursor-pointer bg-[#ffd9dd] rounded-full"
-        @click="nextSlide"
-      >
-        <img src="/images/chevron-right.svg" alt="" class="w-5 h-5 m-auto" />
-      </div>
-    </div>
+      @prev="prevSlide"
+      @next="nextSlide"
+    />
   </div>
 </template>
 

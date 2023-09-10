@@ -33,6 +33,7 @@
   "dependencies": {
     "@vueuse/core": "^10.3.0",
     "gsap": "^3.12.2",
+    "nodemailer": "^6.9.5",
     "vuetify": "^3.3.13"
   }
 }

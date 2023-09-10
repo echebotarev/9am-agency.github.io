@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+  runtimeConfig: {
+    mail: process.env.MAIL_ACCOUNT,
+    mailTo: process.env.MAIL_TO,
+    pwd: process.env.MAIL_PASSWORD,
+  },
   app: {
     head: {
       titleTemplate: "%s",

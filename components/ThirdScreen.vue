@@ -33,7 +33,7 @@ const next = () => {
     </h1>
 
     <div v-if="isMobile" class="relative">
-      <div class="w-full flex flex-row flex-wrap px-5">
+      <div class="w-full grid grid-flow-row-dense grid-cols-2 px-5">
         <img
           v-for="(img, i) in content.images.slice(
             slideIndex,

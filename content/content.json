@@ -276,6 +276,20 @@
           "path": "/images/cases/icon2-4.png"
         }
       ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile3-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-4.png"
+        }
+      ],
       "balls": [
         {
           "path": "/images/cases/balls2-1.svg"
@@ -315,6 +329,20 @@
           "path": "/images/cases/icon3-4.png"
         }
       ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile2-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-4.png"
+        }
+      ],
       "balls": [
         {
           "path": "/images/cases/balls3-1.svg"
@@ -352,6 +380,20 @@
         },
         {
           "path": "/images/cases/icon4-4.png"
+        }
+      ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile4-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-4.png"
         }
       ],
       "balls": [

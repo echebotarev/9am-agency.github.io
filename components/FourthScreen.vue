@@ -212,7 +212,7 @@ onMounted(() => {
           :key="i"
           :src="icon.path"
           alt=""
-          class="m-auto"
+          class="m-3"
         />
       </div>
     </div>

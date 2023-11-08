@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import storage from "~/composables/useStorage";
 const { isMobile } = useDevice();
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 </script>
 
 <template>
@@ -16,21 +20,21 @@ const { isMobile } = useDevice();
       </div>
 
       <div>
-        <nuxt-link :to="{ path: '/', hash: '#smm' }" class="block mb-1"
-          >SMM</nuxt-link
-        >
+        <nuxt-link :to="{ path: '/', hash: '#smm' }" class="block mb-1">{{
+          content.content.links.smm
+        }}</nuxt-link>
         <nuxt-link
           :to="{ path: '/', hash: '#video-production' }"
           class="block mb-1"
         >
-          Видеопродакшен
+          {{ content.content.links.video }}
         </nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: '#us' }" class="block mb-1"
-          >О нас</nuxt-link
-        >
-        <nuxt-link :to="{ path: '/', hash: '#contacts' }" class="block mb-1"
-          >Контакты</nuxt-link
-        >
+        <nuxt-link :to="{ path: '/', hash: '#us' }" class="block mb-1">{{
+          content.content.links.about
+        }}</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#contacts' }" class="block mb-1">{{
+          content.content.links.contacts
+        }}</nuxt-link>
       </div>
 
       <div>

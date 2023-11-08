@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
+import storage from "~/composables/useStorage";
 import gsap from "gsap";
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 
 import ButtonLanguage from "~/components/common/ButtonLanguage.vue";
 import ButtonCall from "~/components/common/ButtonCall.vue";
@@ -43,18 +47,20 @@ onMounted(() => {
 
     <div class="flex h-[70px] justify-end">
       <div class="links my-auto font-semibold">
-        <nuxt-link :to="{ path: '/', hash: '#smm' }" class="mr-10"
-          >SMM</nuxt-link
+        <nuxt-link :to="{ path: '/', hash: '#smm' }" class="mr-10">{{
+          content.content.links.smm
+        }}</nuxt-link>
+        <nuxt-link
+          :to="{ path: '/', hash: '#video-production' }"
+          class="mr-10"
+          >{{ content.content.links.video }}</nuxt-link
         >
-        <nuxt-link :to="{ path: '/', hash: '#video-production' }" class="mr-10"
-          >Видеопродакшен</nuxt-link
-        >
-        <nuxt-link :to="{ path: '/', hash: '#us' }" class="mr-10"
-          >О нас</nuxt-link
-        >
-        <nuxt-link :to="{ path: '/', hash: '#contacts' }" class="mr-10"
-          >Контакты</nuxt-link
-        >
+        <nuxt-link :to="{ path: '/', hash: '#us' }" class="mr-10">{{
+          content.content.links.about
+        }}</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#contacts' }" class="mr-10">{{
+          content.content.links.contacts
+        }}</nuxt-link>
       </div>
 
       <ButtonCall class="mr-10" />

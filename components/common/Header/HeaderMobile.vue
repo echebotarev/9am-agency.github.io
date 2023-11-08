@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import storage from "~/composables/useStorage";
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 
 import ButtonCall from "~/components/common/ButtonCall.vue";
 import ButtonLanguage from "~/components/common/ButtonLanguage.vue";
@@ -37,12 +41,18 @@ const close = () => {
         class="relative mt-[110px] mr-2.5 flex flex-col gap-3 text-xl text-right"
         @click="close"
       >
-        <nuxt-link :to="{ path: '/', hash: '#smm' }">SMM</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#smm' }">{{
+          content.content.links.smm
+        }}</nuxt-link>
         <nuxt-link :to="{ path: '/', hash: '#video-production' }">
-          Видеопродакшен
+          {{ content.content.links.video }}
         </nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: '#us' }"> О нас </nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: '#contacts' }"> Контакты </nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#us' }">
+          {{ content.content.links.about }}
+        </nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: '#contacts' }">
+          {{ content.content.links.contacts }}
+        </nuxt-link>
 
         <div class="flex justify-end w-full">
           <ButtonCall class="w-fit mt-10" />

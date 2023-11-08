@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import storage from "~/composables/useStorage";
 const { isMobile } = useDevice();
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 </script>
 
 <template>
@@ -28,7 +32,7 @@ const { isMobile } = useDevice();
     >
       <div class="my-auto">
         <p class="mb-4">
-          Свяжитесь с нами по телефону или с помощью менеджеров
+          {{ content.content.contacts.description }}
         </p>
         <a href="tel:+373060320713" target="_blank" class="mr-6">
           <img
@@ -88,7 +92,7 @@ const { isMobile } = useDevice();
 
         <div>
           <img src="/images/location.svg" alt="" class="inline-block mr-2" />
-          <span>ул. Албишоара 78/1</span>
+          <span>{{ content.content.contacts.street }}</span>
         </div>
       </div>
     </div>

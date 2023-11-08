@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import ButtonsSlide from "~/components/common/ButtonsSlide.vue";
+import storage from "~/composables/useStorage";
 
-const content = await queryContent("/content").findOne();
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 const { isMobile } = useDevice();
 
 const slideIndex = ref(0);
@@ -29,7 +31,7 @@ const next = () => {
         isMobile ? 'leading-[60px] text-[40px]' : 'text-[64px]'
       }`"
     >
-      Наши клиенты
+      {{ content.content.thirdScreen.title1 }}
     </h1>
 
     <div v-if="isMobile" class="relative">
@@ -67,16 +69,14 @@ const next = () => {
         isMobile ? 'text-[40px]  mt-10' : 'text-[64px]'
       }`"
     >
-      SMM
+      {{ content.content.thirdScreen.title2 }}
     </h1>
     <p
       :class="`text-xl mb-[70px] text-center ${
         isMobile ? 'px-2.5' : 'px-[120px]'
       }`"
     >
-      Взлетайте выше с нами! Раскрывайте свой бренд и захватывайте сердца вашей
-      аудитории. Вместе, мы создадим потрясающие истории, которые никогда не
-      будут забыты. Подарите своей компании заботу и вдохновение!
+      {{ content.content.thirdScreen.description }}
     </p>
   </div>
 </template>

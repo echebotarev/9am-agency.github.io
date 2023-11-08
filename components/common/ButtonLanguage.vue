@@ -20,6 +20,7 @@ const selected = ref(languages.find((l) => l.code === lang) || languages[0]);
 
 watch(selected, async (value) => {
   await storage.setItem("lang", value.code);
+  document.location.reload();
 });
 </script>
 

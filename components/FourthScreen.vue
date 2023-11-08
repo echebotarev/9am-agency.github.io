@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed, ref, onBeforeMount, onMounted, watch } from "vue";
 import ButtonsSlide from "~/components/common/ButtonsSlide.vue";
+import storage from "~/composables/useStorage";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const content = await queryContent("/content").findOne();
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 const { isMobile } = useDevice();
 
 const shadowSlideIndex = ref(0);

@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { useEventListener } from "@vueuse/core";
+import storage from "~/composables/useStorage";
 import gsap from "gsap";
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 
 const { isMobile } = useDevice();
 
@@ -35,32 +39,23 @@ onMounted(() => {
         isMobile ? 'text-[40px]' : 'text-[64px]'
       }`"
     >
-      О нас
+      {{ content.content.secondScreen.title1 }}
     </h1>
-    <p :class="`text-xl mb-7 ${isMobile ? 'px-[10px]' : 'px-[120px]'}`">
-      За последние 7 лет мы подружились со многими брендами и прожили настоящую
-      историю. Мы вместе смеялись, учились и росли, превращая каждое
-      сотрудничество в особый человеческий опыт. Мы команда из более чем 20
-      специалистов, с сердцем и страстью к успеху наших партнеров. Создадим
-      незабываемые истории вместе! Онлайн.
-    </p>
-    <p :class="`text-xl mb-[80px] ${isMobile ? 'px-[10px]' : 'px-[120px]'}`">
-      В нашей команде, каждый специалист - волшебник с душой.
-      <b>Копирайтеры</b> создают тексты, наполненные эмоциями и искренностью.
-      <b>Графические дизайнеры</b>
-      придают каждой идее визуальную гармонию и тепло.
-      <b>Видео операторы</b> переносят атмосферу прямо в сердца зрителей.
-      <b>Смм менеджеры</b> даруют вашему бренду уникальные истории, которые
-      приковывают внимание. Вместе, мы создаем незабываемые моменты, которые
-      останутся навсегда. Ваши успехи - наша главная награда.
-    </p>
+    <div class="mb-[80px]">
+      <p
+        v-for="(paragraph, index) in content.content.secondScreen.description"
+        :key="index"
+        :class="`text-xl mb-7 ${isMobile ? 'px-[10px]' : 'px-[120px]'}`"
+        v-html="paragraph"
+      ></p>
+    </div>
 
     <h1
       :class="`font-bold text-center mb-5 ${
         isMobile ? 'leading-[60px] text-[40px]' : 'text-[64px]'
       }`"
     >
-      Что нас отличает
+      {{ content.content.secondScreen.title2 }}
     </h1>
 
     <div :class="isMobile ? 'overflow-scroll px-2.5 mt-7' : ''">
@@ -95,7 +90,9 @@ onMounted(() => {
 
           <div class="m-auto z-10">
             <div class="text-[64px]">7 +</div>
-            <div class="text-xl font-semibold">лет опыта</div>
+            <div class="text-xl font-semibold">
+              {{ content.content.secondScreen.distinction1 }}
+            </div>
           </div>
         </div>
 
@@ -147,10 +144,10 @@ onMounted(() => {
 
           <div class="m-auto z-10">
             <div class="text-[64px]">23</div>
-            <div class="text-xl font-semibold">
-              человека<br />
-              в команде
-            </div>
+            <div
+              class="text-xl font-semibold"
+              v-html="content.content.secondScreen.distinction2"
+            ></div>
           </div>
         </div>
 
@@ -190,10 +187,10 @@ onMounted(() => {
 
           <div class="m-auto z-10">
             <div class="text-[64px]">70 +</div>
-            <div class="text-xl font-semibold">
-              довольных<br />
-              клиентов
-            </div>
+            <div
+              class="text-xl font-semibold"
+              v-html="content.content.secondScreen.distinction3"
+            ></div>
           </div>
         </div>
 
@@ -233,10 +230,10 @@ onMounted(() => {
 
           <div class="m-auto z-10">
             <div class="text-[64px]">200 +</div>
-            <div class="text-xl font-semibold">
-              созданных<br />
-              рекламных ролика
-            </div>
+            <div
+              class="text-xl font-semibold"
+              v-html="content.content.secondScreen.distinction4"
+            ></div>
           </div>
         </div>
       </div>

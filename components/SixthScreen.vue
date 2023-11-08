@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import storage from "~/composables/useStorage";
 import Button from "~/components/common/Button.vue";
 const { isMobile } = useDevice();
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 
 const form = ref<HTMLElement>();
 const name = ref<HTMLElement>();
@@ -26,13 +30,13 @@ const sendMail = () => {
       .then((res) => {
         if (res.status === "success") {
           form.value?.reset();
-          alert("Сообщение отправлено");
+          alert(content.content.sixthScreen.messageSent);
         } else {
-          alert("Произошла ошибка");
+          alert(content.content.sixthScreen.failedHappened);
         }
       });
   } else {
-    alert("Заполните все поля");
+    alert(content.content.sixthScreen.fillTheGaps);
   }
 };
 </script>
@@ -46,7 +50,7 @@ const sendMail = () => {
           isMobile ? 'text-[40px] ' : 'text-[64px] mb-[30px]'
         }`"
       >
-        Контакты
+        {{ content.content.sixthScreen.title }}
       </h1>
     </div>
 
@@ -59,7 +63,7 @@ const sendMail = () => {
         }`"
       >
         <span class="text-center font-semibold mb-3">
-          Оставьте заявку и менеджер свяжется с вами
+          {{ content.content.sixthScreen.description }}
         </span>
 
         <input
@@ -68,7 +72,7 @@ const sendMail = () => {
           ref="name"
           type="text"
           class="form-input bg-[#F9F9F9] border-b border-[#505050] focus:border-transparent focus:ring-0 text-sm placeholder-[#505050] mb-2"
-          placeholder="Имя"
+          :placeholder="content.content.sixthScreen.placeholder1"
         />
         <input
           id="phone"
@@ -76,11 +80,11 @@ const sendMail = () => {
           ref="phone"
           type="text"
           class="form-input bg-[#F9F9F9] border-b border-[#505050] focus:border-transparent focus:ring-0 text-sm placeholder-[#505050] mb-2"
-          placeholder="Номер телефона"
+          :placeholder="content.content.sixthScreen.placeholder2"
         />
-        <label for="message" class="text-sm text-[#505050] mt-3 pl-3"
-          >Сообщение</label
-        >
+        <label for="message" class="text-sm text-[#505050] mt-3 pl-3">{{
+          content.content.sixthScreen.label
+        }}</label>
         <textarea
           id="message"
           name="message"
@@ -88,7 +92,9 @@ const sendMail = () => {
           class="textarea border border-[#505050] focus:border-transparent focus:ring-0 rounded text-sm h-20"
         ></textarea>
 
-        <Button class="mt-[40px] mx-auto" @click="sendMail">Отправить</Button>
+        <Button class="mt-[40px] mx-auto" @click="sendMail">{{
+          content.content.sixthScreen.buttonText
+        }}</Button>
       </form>
     </div>
   </div>

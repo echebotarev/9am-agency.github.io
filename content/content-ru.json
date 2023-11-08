@@ -1,0 +1,540 @@
+{
+  "content": {
+    "links": {
+      "smm": "SMM",
+      "video": "Видеопродакшен",
+      "about": "О нас",
+      "contacts": "Контакты"
+    },
+    "callToAction": "Заказать услугу",
+    "secondScreen": {
+      "title1": "О нас",
+      "description": ["За последние 7 лет мы подружились со многими брендами и прожили настоящую историю. Мы вместе смеялись, учились и росли, превращая каждое сотрудничество в особый человеческий опыт. Мы команда из более чем 20 специалистов, с сердцем и страстью к успеху наших партнеров. Создадим незабываемые истории вместе! Онлайн.", "В нашей команде, каждый специалист - волшебник с душой. <b>Копирайтеры</b> создают тексты, наполненные эмоциями и искренностью. <b>Графические дизайнеры</b> придают каждой идее визуальную гармонию и тепло. <b>Видео операторы</b> переносят атмосферу прямо в сердца зрителей. <b>Смм менеджеры</b> даруют вашему бренду уникальные истории, которые приковывают внимание. Вместе, мы создаем незабываемые моменты, которые останутся навсегда. Ваши успехи - наша главная награда."],
+      "title2": "Что нас отличает",
+      "distinction1": "лет опыта",
+      "distinction2": "человека<br /> в команде",
+      "distinction3": "довольных<br /> клиентов",
+      "distinction4": "созданных<br /> рекламных ролика"
+    },
+    "thirdScreen": {
+      "title1": "Наши клиенты",
+      "title2": "SMM",
+      "description": "Взлетайте выше с нами! Раскрывайте свой бренд и захватывайте сердца вашей аудитории. Вместе, мы создадим потрясающие истории, которые никогда не будут забыты. Подарите своей компании заботу и вдохновение!"
+    },
+    "fifthScreen": {
+      "title2": "Наши работы",
+      "description": "Мы - ваш надежный партнер в создании видео контента, который искренне трогает сердца аудитории. Объединяем профессионализм и страсть к искусству, чтобы каждый проект стал уникальным. Ваше видео будет не просто материалом, а живой историей и настоящим путешествием вашего бренда."
+    },
+    "sixthScreen": {
+      "messageSent": "Сообщение отправлено",
+      "failedHappened": "Произошла ошибка",
+      "fillTheGaps": "Заполните все поля",
+      "title": "Контакты",
+      "description": "Оставьте заявку и менеджер свяжется с вами",
+      "placeholder1": "Имя",
+      "placeholder2": "Номер телефона",
+      "label": "Сообщение",
+      "buttonText": "Отправить"
+    },
+    "contacts": {
+      "description": "Свяжитесь с нами по телефону или с помощью менеджеров",
+      "street": "ул. Албишоара 78/1"
+    }
+  },
+  "images": [
+    {
+      "path": "/images/clients/Component-7.png"
+    },
+    {
+      "path": "/images/clients/Component-10.png"
+    },
+    {
+      "path": "/images/clients/Component-12.png"
+    },
+    {
+      "path": "/images/clients/Component-11.png"
+    },
+    {
+      "path": "/images/clients/Component-14.png"
+    },
+    {
+      "path": "/images/clients/Component-15.png"
+    },
+    {
+      "path": "/images/clients/Component-16.png"
+    },
+    {
+      "path": "/images/clients/Component-18.png"
+    },
+    {
+      "path": "/images/clients/Component-20.png"
+    },
+    {
+      "path": "/images/clients/Component-21.png"
+    },
+    {
+      "path": "/images/clients/Component-6.png"
+    },
+    {
+      "path": "/images/clients/Component-17.png"
+    },
+    {
+      "path": "/images/clients/Component-19.png"
+    },
+    {
+      "path": "/images/clients/Component-8.png"
+    },
+    {
+      "path": "/images/clients/Component-9.png"
+    },
+    {
+      "path": "/images/clients/Component-38.png"
+    },
+    {
+      "path": "/images/clients/Component-33.png"
+    },
+    {
+      "path": "/images/clients/Component-24.png"
+    },
+    {
+      "path": "/images/clients/Component-35.png"
+    },
+    {
+      "path": "/images/clients/Component-23.png"
+    },
+    {
+      "path": "/images/clients/Component-34.png"
+    },
+    {
+      "path": "/images/clients/Component-36.png"
+    },
+    {
+      "path": "/images/clients/Component-28.png"
+    },
+    {
+      "path": "/images/clients/Component-29.png"
+    },
+    {
+      "path": "/images/clients/Component-31.png"
+    },
+    {
+      "path": "/images/clients/Component-39.png"
+    },
+    {
+      "path": "/images/clients/Component-41.png"
+    },
+    {
+      "path": "/images/clients/Component-26.png"
+    },
+    {
+      "path": "/images/clients/Component-43.png"
+    },
+    {
+      "path": "/images/clients/Component-27.png"
+    },
+    {
+      "path": "/images/clients/Component-42.png"
+    },
+    {
+      "path": "/images/clients/Component-40.png"
+    },
+    {
+      "path": "/images/clients/Component-37.png"
+    },
+    {
+      "path": "/images/clients/Component-23.png"
+    },
+    {
+      "path": "/images/clients/Component-30.png"
+    },
+    {
+      "path": "/images/clients/Component-22.png"
+    },
+    {
+      "path": "/images/clients/Component-32.png"
+    },
+    {
+      "path": "/images/clients/Component-25.png"
+    },
+    {
+      "path": "/images/clients/Component-13.png"
+    },
+    {
+      "path": "/images/clients/Component-22.png"
+    },
+    {
+      "path": "/images/clients/Component-44.png"
+    },
+    {
+      "path": "/images/clients/Component-45.png"
+    },
+    {
+      "path": "/images/clients/Component-46.png"
+    },
+    {
+      "path": "/images/clients/Component-57.png"
+    },
+    {
+      "path": "/images/clients/Component-47.png"
+    },
+    {
+      "path": "/images/clients/Component-55.png"
+    },
+    {
+      "path": "/images/clients/Component-51.png"
+    },
+    {
+      "path": "/images/clients/Component-56.png"
+    },
+    {
+      "path": "/images/clients/Component-48.png"
+    },
+    {
+      "path": "/images/clients/Component-49.png"
+    },
+    {
+      "path": "/images/clients/Component-50.png"
+    },
+    {
+      "path": "/images/clients/Component-52.png"
+    },
+    {
+      "path": "/images/clients/Component-53.png"
+    },
+    {
+      "path": "/images/clients/Component-54.png"
+    },
+    {
+      "path": "/images/clients/Component-58.png"
+    },
+    {
+      "path": "/images/clients/Component-59.png"
+    }
+  ],
+  "cases": [
+    {
+      "bgColor": "#F3FFEE",
+      "title": "Кейс для стоматологической клиники",
+      "description": "Для Natural Smile&Design мы создали рекламные кампании, привлекающие внимание к яркой улыбке. Мы разместили волшебные слова, такие как «индивидуальные решения», «скажи сыррр», и создали дизайн, отражающий страсть и профессионализм бренда.",
+      "logo": {
+        "path": "/images/cases/logo1.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon1-1.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-2.png",
+          "from": {
+            "x": "20%",
+            "y": 300
+          },
+          "to": {
+            "x": "20%",
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-3.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "path": "/images/cases/icon1-4.png",
+          "from": {
+            "x": 0,
+            "y": 300
+          },
+          "to": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile1-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile1-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls1-1.svg"
+        },
+        {
+          "path": "/images/cases/balls1-2.svg"
+        },
+        {
+          "path": "/images/cases/balls1-3.svg"
+        },
+        {
+          "path": "/images/cases/balls1-4.svg"
+        },
+        {
+          "path": "/images/cases/balls1-5.svg"
+        }
+      ]
+    },
+    {
+      "bgColor": "#FEF1E5",
+      "title": "Кейс для торговой сети",
+      "description": "Сотрудничество с Fornetti было настоящим вызовом: мы изменили стиль, использовали новые шрифты и создали вдохновляющие слоганы.",
+      "logo": {
+        "path": "/images/cases/logo2.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon2-1.png"
+        },
+        {
+          "path": "/images/cases/icon2-2.png"
+        },
+        {
+          "path": "/images/cases/icon2-3.png"
+        },
+        {
+          "path": "/images/cases/icon2-4.png"
+        }
+      ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile3-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile3-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls2-1.svg"
+        },
+        {
+          "path": "/images/cases/balls2-2.svg"
+        },
+        {
+          "path": "/images/cases/balls2-3.svg"
+        },
+        {
+          "path": "/images/cases/balls2-4.svg"
+        },
+        {
+          "path": "/images/cases/balls2-5.svg"
+        }
+      ]
+    },
+    {
+      "bgColor": "#E5F1FE",
+      "title": "Кейс для компании охраны и видеонаблюдения",
+      "description": "Oraşul meu Protejat запоминается дизайном, на котором мы разместили сильные сообщения, такие как «оставайтесь в безопасности» и «безопасность подъезда». Благодаря сочетанию дизайна и посыла, нам удалось вдохновить людей обратить больше внимания на эту компанию.",
+      "logo": {
+        "path": "/images/cases/logo3.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon3-1.png"
+        },
+        {
+          "path": "/images/cases/icon3-2.png"
+        },
+        {
+          "path": "/images/cases/icon3-3.png"
+        },
+        {
+          "path": "/images/cases/icon3-4.png"
+        }
+      ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile2-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile2-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls3-1.svg"
+        },
+        {
+          "path": "/images/cases/balls3-2.svg"
+        },
+        {
+          "path": "/images/cases/balls3-3.svg"
+        },
+        {
+          "path": "/images/cases/balls3-4.svg"
+        },
+        {
+          "path": "/images/cases/balls3-5.svg"
+        }
+      ]
+    },
+    {
+      "bgColor": "#FEE5E5",
+      "title": "Кейс для мебельной компании",
+      "description": "Мы создали незабываемые рекламные кампании для Ambianța. Мы усилили их послание и выдвинули на первый план их ценности: творчество, инновации и вдохновение. Мы разместили ключевые слова в уникальном и ярком дизайне, превратив их в мощный посыл.",
+      "logo": {
+        "path": "/images/cases/logo4.png"
+      },
+      "icons": [
+        {
+          "path": "/images/cases/icon4-1.png"
+        },
+        {
+          "path": "/images/cases/icon4-2.png"
+        },
+        {
+          "path": "/images/cases/icon4-3.png"
+        },
+        {
+          "path": "/images/cases/icon4-4.png"
+        }
+      ],
+      "iconsMobile": [
+        {
+          "path": "/images/cases/icon-mobile4-1.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-2.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-3.png"
+        },
+        {
+          "path": "/images/cases/icon-mobile4-4.png"
+        }
+      ],
+      "balls": [
+        {
+          "path": "/images/cases/balls4-1.svg"
+        },
+        {
+          "path": "/images/cases/balls4-2.svg"
+        },
+        {
+          "path": "/images/cases/balls4-3.svg"
+        },
+        {
+          "path": "/images/cases/balls4-4.svg"
+        },
+        {
+          "path": "/images/cases/balls4-5.svg"
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "main": {
+      "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+      "controls": true
+    },
+    "items": [
+      {
+        "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+        "controls": false,
+        "poster": "/images/video/screen1.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/FQ51wGkSS1U?si=zkq-JXLDJDShBGHx",
+        "controls": false,
+        "poster": "/images/video/screen2.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/fLBbIYHmvZ0?si=2dcKmDA_4vTa7FPX",
+        "controls": false,
+        "poster": "/images/video/screen3.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/_TU6bTTRIvY?si=rdvA3l9tqK-3098A",
+        "controls": false,
+        "poster": "/images/video/screen4.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/2cOQGqdx2gI?si=uviIXvIOOrS38vbB",
+        "controls": false,
+        "poster": "/images/video/screen5.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/O2-ZHshn2tc?si=tkBgSED5cfcJKn5T",
+        "controls": false,
+        "poster": "/images/video/screen6.webp",
+        "position": 0
+      },
+      {
+        "url": "https://www.youtube.com/embed/F4W3vndSOZQ?si=ePAzgJBTPiRIMwfC",
+        "controls": false,
+        "poster": "/images/video/screen7.webp",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/gNQgrGnwiWA?si=qDf-1leCnoYOBj_X",
+        "controls": false,
+        "poster": "/images/video/screen8.webp",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/CeoBeUIt0O4?si=MQ6DCPEdjcZ1Jsmy",
+        "controls": false,
+        "poster": "/images/video/screen9.webp",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/3Wci_5N7q3U?si=tJuJeFWxB44OvEXQ",
+        "controls": false,
+        "poster": "/images/video/screen10.webp",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/TrIdtOkIfjM?si=F-g2eKaqhdn-bf6V",
+        "controls": false,
+        "poster": "/images/video/screen11.webp",
+        "position": 1
+      },
+      {
+        "url": "https://www.youtube.com/embed/OYX9zN5BVso?si=bKVhB_zzBLPWNuN4",
+        "controls": false,
+        "poster": "/images/video/screen12.webp",
+        "position": 1
+      }
+    ]
+  }
+}

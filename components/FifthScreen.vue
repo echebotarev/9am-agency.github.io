@@ -6,7 +6,10 @@ import VideoContainer from "~/components/common/VideoContainer.vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const content = await queryContent("/content").findOne();
+import storage from "~/composables/useStorage";
+
+const lang = await storage.getItem("lang");
+const content = await queryContent(`/content-${lang}`).findOne();
 const { isMobile } = useDevice();
 
 const getRadian = (deg: number) => (deg * Math.PI) / 180;
@@ -122,7 +125,7 @@ onMounted(() => {
       class="absolute ball"
     />
     <nuxt-link :to="{ path: '/', hash: '#contacts' }">
-      <Button class="mb-[80px]"> Заказать услугу </Button>
+      <Button class="mb-[80px]"> {{ content.content.callToAction }} </Button>
     </nuxt-link>
 
     <h1
@@ -138,10 +141,7 @@ onMounted(() => {
         isMobile ? 'px-3' : 'px-[120px]'
       }`"
     >
-      Мы - ваш надежный партнер в создании видео контента, который искренне
-      трогает сердца аудитории. Объединяем профессионализм и страсть к
-      искусству, чтобы каждый проект стал уникальным. Ваше видео будет не просто
-      материалом, а живой историей и настоящим путешествием вашего бренда.
+      {{ content.content.fifthScreen.description }}
     </p>
 
     <h1
@@ -149,7 +149,7 @@ onMounted(() => {
         isMobile ? 'text-[40px]' : 'text-[64px]'
       }`"
     >
-      Наши работы
+      {{ content.content.fifthScreen.title2 }}
     </h1>
 
     <div v-if="isMobile" class="overflow-x-scroll">
@@ -199,7 +199,9 @@ onMounted(() => {
       />
 
       <nuxt-link :to="{ path: '/', hash: '#contacts' }">
-        <Button class="mb-[80px] mt-[50px]"> Заказать услугу </Button>
+        <Button class="mb-[80px] mt-[50px]">
+          {{ content.content.callToAction }}
+        </Button>
       </nuxt-link>
     </div>
   </div>

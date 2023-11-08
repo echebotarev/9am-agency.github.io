@@ -2,6 +2,7 @@
 import { onMounted } from "vue";
 import gsap from "gsap";
 
+import ButtonLanguage from "~/components/common/ButtonLanguage.vue";
 import ButtonCall from "~/components/common/ButtonCall.vue";
 
 onMounted(() => {
@@ -58,16 +59,7 @@ onMounted(() => {
 
       <ButtonCall class="mr-10" />
 
-      <!--      <div class="w-[65px]">
-        <v-select
-          :items="['RU', 'ROM', 'EN']"
-          density="compact"
-          variant="plain"
-          label="RU"
-          single-line
-          solo
-        ></v-select>
-      </div>-->
+      <ButtonLanguage class="d-flex mr-6" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onBeforeMount, onMounted, computed } from "vue";
+import { ref, onBeforeMount, onMounted } from "vue";
 import { gsap } from "gsap";
 import { useEventListener } from "@vueuse/core";
 

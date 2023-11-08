@@ -2,6 +2,7 @@
 import { ref } from "vue";
 
 import ButtonCall from "~/components/common/ButtonCall.vue";
+import ButtonLanguage from "~/components/common/ButtonLanguage.vue";
 
 const isOpen = ref<boolean>(false);
 const close = () => {
@@ -33,7 +34,7 @@ const close = () => {
       />
 
       <div
-        class="absolute top-[110px] right-2.5 flex flex-col gap-3 text-xl text-right"
+        class="relative mt-[110px] mr-2.5 flex flex-col gap-3 text-xl text-right"
         @click="close"
       >
         <nuxt-link :to="{ path: '/', hash: '#smm' }">SMM</nuxt-link>
@@ -43,7 +44,13 @@ const close = () => {
         <nuxt-link :to="{ path: '/', hash: '#us' }"> О нас </nuxt-link>
         <nuxt-link :to="{ path: '/', hash: '#contacts' }"> Контакты </nuxt-link>
 
-        <ButtonCall class="mt-10" />
+        <div class="flex justify-end w-full">
+          <ButtonCall class="w-fit mt-10" />
+        </div>
+      </div>
+
+      <div class="flex justify-end w-full">
+        <ButtonLanguage class="mt-10 mr-2.5 w-[100px]" />
       </div>
     </div>
   </div>

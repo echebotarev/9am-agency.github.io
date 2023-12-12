@@ -46,6 +46,11 @@ export default defineNuxtConfig({
     // },
     "@nuxtjs/device",
   ],
+  content: {
+    experimental: {
+      clientDb: true,
+    },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},

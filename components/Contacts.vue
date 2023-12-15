@@ -34,13 +34,13 @@ const content = await queryContent(`/content-${lang}`).findOne();
         <p class="mb-4">
           {{ content.content.contacts.description }}
         </p>
-        <a href="tel:+373060320713" target="_blank" class="mr-6">
+        <a href="tel:+37378219920" target="_blank" class="mr-6">
           <img
             src="/images/call.svg"
             alt=""
             class="w-[20px] inline-block mr-2"
           />
-          <span>060 320 713</span>
+          <span>+373 78 21 99 20</span>
         </a>
 
         <span>

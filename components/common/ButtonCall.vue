@@ -4,7 +4,7 @@ const { isMobile } = useDevice();
 
 <template>
   <a
-    href="tel:+373060320713"
+    href="tel:+37378219920"
     :class="`call-button rounded-full flex my-auto px-8 py-3.5 ${
       isMobile ? 'bg-[#d02431]' : ''
     }`"
@@ -26,7 +26,7 @@ const { isMobile } = useDevice();
       </g>
     </svg>
     <div :class="`font-medium ${isMobile ? 'text-white' : ''}`">
-      060 320 713
+      +373 78 21 99 20
     </div>
   </a>
 </template>

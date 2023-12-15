@@ -38,13 +38,13 @@ const content = await queryContent(`/content-${lang}`).findOne();
       </div>
 
       <div>
-        <a href="tel:+373060320713" class="block mb-3">
+        <a href="tel:+37378219920" class="block mb-3">
           <img
             src="/images/phone-white.svg"
             alt=""
             class="inline-block mr-2 w-5"
           />
-          <span>060 320 713</span>
+          <span>+373 78 21 99 20</span>
         </a>
 
         <p>

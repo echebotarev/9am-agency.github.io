@@ -7,7 +7,7 @@ const content = await queryContent(`/content-${lang}`).findOne();
 const { isMobile } = useDevice();
 
 const slideIndex = ref(0);
-const step = 24;
+const step = 12;
 const prev = () => {
   if (slideIndex.value > step) {
     slideIndex.value -= step;
